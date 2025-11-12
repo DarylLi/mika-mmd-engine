@@ -1,0 +1,2 @@
+(self.webpackChunk_kuroMi=self.webpackChunk_kuroMi||[]).push([[952],{7801:e=>{e.exports={kawaii:function(){window._changedBeforeConsoled&&window._changedBeforeConsoled.log("wawawa")},kuromiBabay:function(){return{name:"hihi",sex:"ggemail"}}}}}]);
+//# sourceMappingURL=mika_chunk_extra.bundle.js.map

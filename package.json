@@ -1,0 +1,47 @@
+{
+  "name": "mika-mmd-tv",
+  "version": "1.4.8",
+  "author": "tk",
+  "scripts": {
+    "start": "webpack --mode=development",
+    "build": "webpack --mode=production",
+    "serve": "node server.js"
+  },
+  "main": "src/lib.js",
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "autoprefixer": "^10.4.16",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "loader-utils": "^2.0.0",
+    "postcss-loader": "^7.3.4",
+    "sass": "^1.74.1",
+    "sass-loader": "^14.1.1",
+    "schema-utils": "^3.0.0",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "url-loader": "^4.1.1",
+    "vue-loader": "17.4.2",
+    "webpack": "^5.20.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.2"
+  },
+  "dependencies": {
+    "@bjorn3/browser_wasi_shim": "^0.3.0",
+    "@wasmer/sdk": "^0.6.0",
+    "@wasmer/wasi": "^1.2.1",
+    "axios": "^1.6.8",
+    "buffer": "^6.0.3",
+    "qiankun": "^2.10.16",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "three": "^0.163.0",
+    "typescript": "^5.4.5",
+    "vue": "3.4.19"
+  }
+}

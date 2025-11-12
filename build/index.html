@@ -1,0 +1,65 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title></title><script type=importmap>{
+		    "imports": {
+		      "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+		      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+		    }
+		  }</script><script type=x-shader/x-vertex id=vertexshader2>uniform float amplitude;
+
+			attribute vec3 displacement;
+			attribute vec3 customColor;
+
+			varying vec3 vColor;
+
+			void main() {
+
+				vec3 newPosition = position + amplitude * displacement;
+
+				vColor = customColor;
+
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
+
+			}</script><script type=x-shader/x-fragment id=fragmentshader2>uniform vec3 color;
+			uniform float opacity;
+
+			varying vec3 vColor;
+
+			void main() {
+
+				gl_FragColor = vec4( vColor * color, opacity );
+
+			}</script><script type=x-shader/x-vertex id=vertexshader>attribute float size;
+			attribute vec4 ca;
+
+			varying vec4 vColor;
+
+			void main() {
+
+				vColor = ca;
+
+				vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+
+				gl_PointSize = size * ( 150.0 / -mvPosition.z );
+
+				gl_Position = projectionMatrix * mvPosition;
+
+			}</script><script type=x-shader/x-fragment id=fragmentshader>uniform vec3 color;
+			uniform sampler2D pointTexture;
+
+			varying vec4 vColor;
+
+			void main() {
+
+				vec4 outColor = texture2D( pointTexture, gl_PointCoord );
+
+				if ( outColor.a < 0.5 ) discard;
+
+				gl_FragColor = outColor * vec4( color * vColor.xyz, 1.0 );
+
+				float depth = gl_FragCoord.z / gl_FragCoord.w;
+				const vec3 fogColor = vec3( 0.0 );
+
+				float fogFactor = smoothstep( 200.0, 600.0, depth );
+				gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+
+			}</script><script defer=defer src=main.bundle.js></script><script defer=defer src=vendors.bundle.js></script><script defer=defer src=app.bundle.js></script><script defer=defer src=lib.bundle.js></script><script defer=defer src=libVue.bundle.js></script><script defer=defer src=mikaTV.bundle.js></script></head><div id=root></div><body>kira~⭐</body><script src=http://all.franxxdaryl.site/dist/lib/pixi.js></script><script src=http://franxxdaryl.site/dist/ammo-umd.js></script><script>window.Ammo()</script><script type=module>// import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js' // will fetch the randomly-chosen URL
+	// window.GLTFLoader = GLTFLoader;</script></html>
