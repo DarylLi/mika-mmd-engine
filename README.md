@@ -7,7 +7,7 @@
 MIKA MMD TV 是一个在浏览器中运行的 3D MMD 动画播放器，支持加载 PMX 格式的人物模型、VMD 格式的动作和镜头动画，并提供了丰富的场景、灯光和特效功能。项目采用模块化设计，支持微前端架构，可以轻松集成到其他项目中。
 ## 📺 预览
 
-![Uploading image.png…]()
+<img width="3840" height="1904" alt="image" src="https://github.com/user-attachments/assets/14206a39-633c-40fc-a64d-a43a2312e781" />
 
 ## ✨ 功能特性
 
