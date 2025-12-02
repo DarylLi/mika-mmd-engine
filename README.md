@@ -57,18 +57,12 @@ MIKA MMD TV 是一个在浏览器中运行的 3D MMD 动画播放器，支持加
 - **TypeScript 5.4.5**：类型系统支持
 - **Sass/SCSS**：CSS 预处理器
 
-### 微前端
-- **Qiankun 2.10.16**：微前端框架，支持子应用集成
 
 ### WebAssembly
 - **WASM 支持**：使用 Rust 编译的 WASM 模块（wasm_ex）
 - **@wasmer/sdk**：WASM 运行时支持
 - **@wasmer/wasi**：WASI 接口支持
 
-### 其他工具库
-- **Axios**：HTTP 请求库
-- **TWEEN.js**：动画补间库（已集成但部分功能未启用）
-- **lil-gui**：调试 GUI 工具（开发模式）
 
 ## 📁 项目结构
 
